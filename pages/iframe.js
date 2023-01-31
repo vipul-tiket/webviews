@@ -45,7 +45,7 @@ export default function BackOrClose() {
   }
 
   const openIframe = () => {
-    setExternalUrl('http://webviews-psi.vercel.app/ramankit');
+    setExternalUrl('https://webviews-psi.vercel.app/ramankit');
   }
   
 
