@@ -222,107 +222,17 @@ export default function Home({ data }) {
 
       <div className='container p-8 bg-slate-100'>
         <div className="grid grid-cols-1 gap-2">
-          <div>{data}</div>
-          <button onClick={gotoStore} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Open PlayStore / AppStore
-          </button>
-          <div className="grid grid-cols-2 gap-2">
-            <button onClick={showNavbar} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-              Show Navbar
-            </button>
-            <button onClick={hideNavbar} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-              Hide Navbar
-            </button>
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <button onClick={showLoading} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-              Show Loading (Will hide after 2s for testing purposes)
-            </button>
-            <button onClick={hideLoading} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-              Hide Loading
-            </button>
-          </div>
+          
           <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={historyBackCount} onChange={ e => setHistoryBackCount(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="number"/>
-            <button onClick={customHistoryBack} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              History Back
-            </button>
-          </div>
-          <button onClick={closeWebViewJSI} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Close WebView (JSI)
-          </button>
-          <button onClick={closeWebViewHistoryBack} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Close WebView (history.back)
-          </button>
-          <button onClick={redirectToBlibliCloseIntent} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Close With Redirection (https://www.blibli.com/:intent/close)
-          </button>
-          <button onClick={redirectToBlibliCloseIntentIsExternalTrue} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Close With Redirection (https://www.blibli.com/:intent/close?isExternal=true)
-          </button>
-          <button onClick={redirectToBlibliTiketRewardsCloseIntent} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Close With Redirection (https://www.bliblitiketrewards.com/:intent/close)
-          </button>
-          <button onClick={updateAccountData} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Update Account Data
-          </button>
-          <button onClick={onCLickOpenPNV} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Update PNV
-          </button>
-          <button onClick={onClickOpenPNVWithoutTracker} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-            Update PNV Without Tracker Property
-          </button>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <button onClick={backOrClose} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center mb-2">
-              Back or Close (will behave like closeWebView because on first page no history)
-            </button>
-            <button onClick={navigateToBackOrClosePage} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Dummy Page to test Back or Close
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={openNewWebViewUrl} onChange={ e => setOpenNewWebViewUrl(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={openNewWebView} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Open New WebView
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={externalUrl} onChange={ e => setExternalUrl(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={forceExternal} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Force External
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={title} onChange={ e => setTitle(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={setTitleWebView} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Set Title
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={snackbarMessage} onChange={ e => setSnackbarMessage(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={showSnackbarDefault} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Show SnackBar Default
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={snackbarMessage} onChange={ e => setSnackbarMessage(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={showSnackbarSuccess} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Show SnackBar Success
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={snackbarMessage} onChange={ e => setSnackbarMessage(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={showSnackbarError} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Show SnackBar Error
-            </button>
-          </div>
-          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <input value={dialogContent.title} onChange={ e => setDialogContent({...dialogContent, title: e.target.value}) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <input value={dialogContent.body} onChange={ e => setDialogContent({...dialogContent, body: e.target.value}) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <input value={dialogContent.buttonText} onChange={ e => setDialogContent({...dialogContent, buttonText: e.target.value}) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="text"/>
-            <button onClick={showDialog} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
-              Show Dialog
-            </button>
+            <a href='https://webviews-p7blbypq4-vipul-tiket.vercel.app/iframe' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+              IFRAME LINK 
+            </a>
+            <a href='https://webviews-p7blbypq4-vipul-tiket.vercel.app/newurl' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+              Direct open external url
+            </a>
+            <a href='https://webviews-p7blbypq4-vipul-tiket.vercel.app/ramankit' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+              extra link
+            </a>
           </div>
         </div>
       </div>
