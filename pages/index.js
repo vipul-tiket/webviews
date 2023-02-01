@@ -224,17 +224,17 @@ export default function Home({ data }) {
         <div className="grid grid-cols-1 gap-2">
           
           <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <a href='https://webviews-p7blbypq4-vipul-tiket.vercel.app/iframe' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+            <a href='https://webviews-psi.vercel.app/iframe' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
               IFRAME LINK 
             </a>
             </div>
             <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <a href='https://webviews-p7blbypq4-vipul-tiket.vercel.app/newurl' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+            <a href='https://webviews-psi.vercel.app/newurl' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
               Direct open external url
             </a>
             </div>
             <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <a href='https://webviews-p7blbypq4-vipul-tiket.vercel.app/ramankit' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+            <a href='https://webviews-psi.vercel.app/ramankit' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
               extra link
             </a>
           </div>

@@ -45,7 +45,7 @@ export default function BackOrClose() {
   }
 
   const openIframe = () => {
-    setExternalUrl('https://webviews-p7blbypq4-vipul-tiket.vercel.app/ramankit');
+    setExternalUrl('https://webviews-psi.vercel.app//ramankit');
   }
   
 
