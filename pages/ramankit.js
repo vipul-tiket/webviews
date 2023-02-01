@@ -2,16 +2,50 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function BackOrClose() {
-
-  const closeWebViewHistoryBack = (e) => {
-    history.back()
-  }
-  
   const closeWebViewJSI = (e) => {
     if(!!window.native) {
       window.native.closeWebView()
     }
   }
+
+  const backOrClose = (e) => {
+    if(!!window.native) {
+      window.native.backOrClose()
+    }
+  }
+  var myHistory = [];
+
+  const emptyStack = () => {
+    // window.history.state = null;
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+    window.history.pushState(myHistory, "ramankit", "ramankit");
+  }
+
+  const jsihistory = () => {
+    if(!!window.native) {
+      window.native.backOrClose()
+    }
+    history.back()
+  }
+
+  const historyjsi = () => {
+    history.back()
+    if(!!window.native) {
+      window.native.backOrClose()
+    }
+  }
+  
+
+  const closeWebViewHistoryBack = (e) => {
+    history.back()
+  }
+
   return (
     <div>
       <Head>
@@ -26,14 +60,25 @@ export default function BackOrClose() {
         </div>
 
         <div className="grid grid-cols-1 gap-2">
-          
+          <button onClick={backOrClose} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+            Back Or Close
+          </button>
           <button onClick={closeWebViewJSI} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
             Close WebView (JSI)
           </button>
           <button onClick={closeWebViewHistoryBack} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
             Close WebView (history.back)
           </button>
-          
+          <button onClick={emptyStack} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+            Empty stack - hack hai abhi
+          </button>
+          <a href='https://www.tiket.com' className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">Navigate directly</a>
+          <button onClick={jsihistory} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+              JSI back + history.back
+          </button>
+          <button onClick={historyjsi} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+              history.back + JSI back
+          </button>
         </div>
       </div>
     </div>
