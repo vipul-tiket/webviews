@@ -97,7 +97,7 @@ export default function BackOrClose() {
               history.back + JSI back
           </button>
           <button onClick={oneminushistory} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
-              1 - JSI back
+              1 - history back
           </button>
           <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
             <input value={historyBackCount} onChange={ e => setHistoryBackCount(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="number"/>
