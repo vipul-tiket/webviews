@@ -6,15 +6,13 @@ export default function BackOrClose() {
   const [externalUrl, setExternalUrl] = useState("")
 
   const closeWebViewJSI = (e) => {
-    if(!!window.native) {
-      window.native.closeWebView()
-    }
+    window?.native?.closeWebView()
+    window?.webkit?.messageHandlers?.closeWebView?.postMessage("");
   }
 
   const backOrClose = (e) => {
-    if(!!window.native) {
-      window.native.backOrClose()
-    }
+    window?.native?.backOrClose()
+    window?.webkit?.messageHandlers?.backOrClose?.postMessage("");
   }
   var myHistory = [];
 
@@ -31,17 +29,15 @@ export default function BackOrClose() {
   }
 
   const jsihistory = () => {
-    if(!!window.native) {
-      window.native.backOrClose()
-    }
+    window?.native?.backOrClose()
+    window?.webkit?.messageHandlers?.backOrClose?.postMessage("");
     history.back()
   }
 
   const historyjsi = () => {
     history.back()
-    if(!!window.native) {
-      window.native.backOrClose()
-    }
+    window?.native?.backOrClose()
+    window?.webkit?.messageHandlers?.backOrClose?.postMessage("");
   }
 
   const openIframe = () => {

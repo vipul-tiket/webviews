@@ -5,17 +5,7 @@ export default function BackOrClose() {
 
   const [externalUrl, setExternalUrl] = useState("")
 
-  const closeWebViewJSI = (e) => {
-    if(!!window.native) {
-      window.native.closeWebView()
-    }
-  }
 
-  const backOrClose = (e) => {
-    if(!!window.native) {
-      window.native.backOrClose()
-    }
-  }
   var myHistory = [];
 
   const emptyStack = () => {
@@ -28,20 +18,6 @@ export default function BackOrClose() {
     window.history.pushState(myHistory, "ramankit", "ramankit");
     window.history.pushState(myHistory, "ramankit", "ramankit");
     window.history.pushState(myHistory, "ramankit", "ramankit");
-  }
-
-  const jsihistory = () => {
-    if(!!window.native) {
-      window.native.backOrClose()
-    }
-    history.back()
-  }
-
-  const historyjsi = () => {
-    history.back()
-    if(!!window.native) {
-      window.native.backOrClose()
-    }
   }
 
   const openIframe = () => {
