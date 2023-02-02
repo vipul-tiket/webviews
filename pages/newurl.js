@@ -73,6 +73,10 @@ export default function BackOrClose() {
           <a href='https://m.tiket.com/to-do/search' className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
               Open deeplink of app
           </a>
+          <a href='http://localhost:3000/ramankit1' className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+              Ramankit 1 for case 3
+          </a>
+
         </div>
       </div>
     </div>

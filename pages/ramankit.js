@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function BackOrClose() {
@@ -13,8 +14,9 @@ export default function BackOrClose() {
       window.native.backOrClose()
     }
   }
+  
   var myHistory = [];
-
+  const [historyBackCount, setHistoryBackCount] = useState(-1)
   const emptyStack = () => {
     // window.history.state = null;
     window.history.pushState(myHistory, "ramankit", "ramankit");
@@ -25,6 +27,18 @@ export default function BackOrClose() {
     window.history.pushState(myHistory, "ramankit", "ramankit");
     window.history.pushState(myHistory, "ramankit", "ramankit");
     window.history.pushState(myHistory, "ramankit", "ramankit");
+  }
+  
+
+  const oneminushistory = () => {
+    history.go(1 - history.length);
+  }
+
+  const recursivehistoryback = () => {
+    while(history.length > 0) {
+      console.log(history.length);
+      history.go(-1);
+    }
   }
 
   const jsihistory = () => {
@@ -79,6 +93,26 @@ export default function BackOrClose() {
           <button onClick={historyjsi} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
               history.back + JSI back
           </button>
+          <button onClick={oneminushistory} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+              1 - JSI back
+          </button>
+          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
+            <input value={historyBackCount} onChange={ e => setHistoryBackCount(e.target.value) } className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2" type="number"/>
+            <button onClick={customHistoryBack} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+              History Back
+            </button>
+          </div>
+          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
+            <button onClick={recursivehistoryback} className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+              case 3 - history length recursive
+            </button>
+          </div>
+          <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
+            <a href='https://www.blibli.com/home/favourites' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+              blibli
+            </a>
+          </div>
+          
         </div>
       </div>
     </div>
