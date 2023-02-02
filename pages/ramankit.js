@@ -17,6 +17,9 @@ export default function BackOrClose() {
   
   var myHistory = [];
   const [historyBackCount, setHistoryBackCount] = useState(-1)
+  const customHistoryBack = (e) => {
+    history.go(historyBackCount)
+  }
   const emptyStack = () => {
     // window.history.state = null;
     window.history.pushState(myHistory, "ramankit", "ramankit");
