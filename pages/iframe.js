@@ -45,7 +45,7 @@ export default function BackOrClose() {
   }
 
   const openIframe = () => {
-    setExternalUrl('https://webviews-psi.vercel.app//ramankit');
+    setExternalUrl('https://www.blibli.com/home/favourites');
   }
   
 
