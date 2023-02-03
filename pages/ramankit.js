@@ -103,7 +103,7 @@ export default function BackOrClose() {
             </button>
           </div>
           <div className="shadow-md rounded-md p-2 w-full bg-neutral-50 text-center">
-            <a href='https://www.blibli.com/home/favourites' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
+            <a href='https://wwwuata.gdn-app.com/home/favourites' className="shadow-md rounded-md p-2 w-full bg-blue-500 active:bg-sky-600 text-white text-center">
               blibli
             </a>
           </div>
