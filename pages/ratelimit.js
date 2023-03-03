@@ -16,7 +16,7 @@ export default function BackOrClose() {
 
   const reload = (e) => {
     if (!!window && !!window.location) {
-      window.location.reload()
+      window.history.back()
     }
     
   }
