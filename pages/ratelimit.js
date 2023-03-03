@@ -36,7 +36,7 @@ export default function BackOrClose() {
         <div style={{"padding": "20px","border-radius": "5px","max-width": "420px","text-align": "center"}}>
         <img style={{"width": "100%","height": "auto","margin-bottom": "32px"}} src="https://www.tiket.com/to-do/assets/rate-limiter-access-illustration.png" alt="" />
         <div style={{"font-weight": "600","font-size": "20px","line-height": "30px","color": "#35405a","margin-bottom": "6px"}}>Sorry, but you have to wait</div>
-        <div style={{"font-weight": "400","font-size": "14px","line-height": "22px","color": "#58627a","margin-bottom": "24px"}}>This ticket is in high demand. Tap "Retry" periodically until you can continue.</div>
+        <div style={{"font-weight": "400","font-size": "14px","line-height": "22px","color": "#58627a","margin-bottom": "24px"}}>This ticket is in high demand. Tap Retry periodically until you can continue.</div>
          
          <button onClick={reload} style={{"cursor":"pointer", "font-size": "18px","line-height": "28px","color": "#fff","background": "#0064d2","border-radius": "24px","padding-top": "9px","padding-bottom": "11px","width": "100%","border": "none"}}>RETRY</button>
         </div>
