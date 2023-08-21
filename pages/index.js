@@ -29,6 +29,16 @@ export default function Home({ data }) {
       window.removeEventListener('nativeJSICallback', nativeJsiCustomEventListener)
     }
   })
+  const [hasCameraPermission, setCameraPermission] = useState()
+  useEffect(() => {
+    navigator.permissions.query({name: 'camera'})
+      .then((permission) => {
+        setCameraPermission(permission.state);
+          console.log("camera state", permission.state);
+      }).catch((error) => {
+          console.log('Got error :', error);
+      })
+  })
 
   const [title, setTitle] = useState("tiket.com")
   const [snackbarMessage, setSnackbarMessage] = useState("Hello from Snackbar")
@@ -238,7 +248,14 @@ export default function Home({ data }) {
               extra link
             </a>
           </div>
+
+          
         </div>
+      </div>
+
+
+      <div>
+        Camera permission: {hasCameraPermission}
       </div>
     </div>
   )
