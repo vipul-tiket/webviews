@@ -249,6 +249,13 @@ export default function Home({ data }) {
             </a>
           </div>
 
+          <div>
+            <a href='http://www.tiket.com'>3XX redirect</a>
+            <a href='http://www.tiket.com/hotel/abra-ca-dabra'>404 redirect</a>
+            <a href='https://vipul-sharma.in/'>5xx</a>
+            
+          </div>
+
           
         </div>
       </div>
