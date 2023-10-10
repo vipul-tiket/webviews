@@ -251,7 +251,7 @@ export default function Home({ data }) {
 
           <div>
             <a href='http://www.tiket.com'>3XX redirect</a>
-            <a href='http://www.tiket.com/hotel/abra-ca-dabra'>404 redirect</a>
+            <a href='https://webviews-psi.vercel.app/asdadssad'>404 redirect</a>
             <a href='https://vipul-sharma.in/'>5xx</a>
             
           </div>
