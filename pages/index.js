@@ -30,15 +30,15 @@ export default function Home({ data }) {
     }
   })
   const [hasCameraPermission, setCameraPermission] = useState()
-  useEffect(() => {
-    navigator.permissions.query({name: 'camera'})
-      .then((permission) => {
-        setCameraPermission(permission.state);
-          console.log("camera state", permission.state);
-      }).catch((error) => {
-          console.log('Got error :', error);
-      })
-  })
+  // useEffect(() => {
+  //   navigator.permissions.query({name: 'camera'})
+  //     .then((permission) => {
+  //       setCameraPermission(permission.state);
+  //         console.log("camera state", permission.state);
+  //     }).catch((error) => {
+  //         console.log('Got error :', error);
+  //     })
+  // })
 
   const [title, setTitle] = useState("tiket.com")
   const [snackbarMessage, setSnackbarMessage] = useState("Hello from Snackbar")
@@ -250,6 +250,8 @@ export default function Home({ data }) {
           </div>
 
           <div>
+            <a href='https://ahrefs.com/blog/'>301 Redirect</a>
+
             <a href='http://www.tiket.com'>3XX redirect</a>
             <a href='https://webviews-psi.vercel.app/asdadssad'>404 redirect</a>
             <a href='https://vipul-sharma.in/'>5xx</a>
