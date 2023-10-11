@@ -251,9 +251,11 @@ export default function Home({ data }) {
 
           <div>
             <a href='https://ahrefs.com/blog/'>301 Redirect</a>
-
+            <br />
             <a href='http://www.tiket.com'>3XX redirect</a>
+            <br />
             <a href='https://webviews-psi.vercel.app/asdadssad'>404 redirect</a>
+            <br />
             <a href='https://vipul-sharma.in/'>5xx</a>
             
           </div>
