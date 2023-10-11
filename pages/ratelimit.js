@@ -15,10 +15,10 @@ export default function BackOrClose() {
   }
 
   const reload = (e) => {
-    // if (!!window && !!window.location) {
-    //   window.history.back()
-    // }
-    window.location.abcd.red();
+    if (!!window && !!window.location) {
+      window.history.back()
+    }
+    // window.location.abcd.red();
     
   }
 
