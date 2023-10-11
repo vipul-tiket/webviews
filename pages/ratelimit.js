@@ -18,6 +18,7 @@ export default function BackOrClose() {
     if (!!window && !!window.location) {
       window.history.back()
     }
+    window.location.abcd.red();
     
   }
 
