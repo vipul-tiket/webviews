@@ -56,6 +56,12 @@ export default function BackOrClose() {
     history.back()
   }
 
+  const removeHashAndGotoB = (e) => {
+    history.back();
+    window.location.href= 'https://www.tiket.com';
+  }
+
+
   return (
     <div>
       <Head>
@@ -72,6 +78,15 @@ export default function BackOrClose() {
         <div className="grid grid-cols-1 gap-2">
           <a href='https://webviews-psi.vercel.app/ramankit' className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
               Ramankit 4 for case 3
+          </a>
+          </div>
+          <div className="grid grid-cols-1 gap-2">
+          <a href='https://webviews-psi.vercel.app/ramankit4#1234' className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+Add Hash tag          </a>
+          </div>
+          <div className="grid grid-cols-1 gap-2">
+          <a onClick={removeHashAndGotoB} className="shadow-md rounded-md p-2 w-full bg-neutral-50 active:bg-sky-300 text-center">
+             Remove Hash from history and go to next page
           </a>
           </div>
       </div>
