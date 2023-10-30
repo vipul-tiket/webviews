@@ -89,6 +89,7 @@ Add Hash tag          </a>
              Remove Hash from history and go to next page
           </a>
           </div>
+          <img src='vipul.com/abcd'></img>
       </div>
     </div>
   )
